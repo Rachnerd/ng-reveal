@@ -1,0 +1,170 @@
+
+section {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .2em .4em .2em .2em;
+  z-index: 9;
+  transition: all 1s ease;
+  opacity: 0;
+  width: 100px;
+}
+
+#logo img {
+  border-bottom: 1px solid white !important;
+  border-top: 1px solid white !important;
+  padding-bottom: .1em;
+  padding-top: .1em;
+  width: 100%;
+}
+
+.slide-background.blur {
+  -webkit-filter: saturate(.5) brightness(.8);
+  -moz-filter: saturate(.7) brightness(.9);
+  -o-filter: saturate(.7) brightness(.9);
+  -ms-filter: saturate(.7) brightness(.9);
+  filter: saturate(.7) brightness(.5);
+}
+
+.slide-background.blur-light {
+  -webkit-filter: saturate(.5) brightness(.8);
+  -moz-filter: saturate(.7) brightness(.9);
+  -o-filter: saturate(.7) brightness(.9);
+  -ms-filter: saturate(.7) brightness(.9);
+  filter: saturate(.8) brightness(.8);
+}
+
+.flex-row-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-column-layout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+li.ov-borders {
+  margin: .4em !important;
+}
+
+.delay:before,
+.delay:after {
+  transition-delay: .8s !important;
+}
+
+.wait-for-border-animation:before,
+.wait-for-border-animation:after {
+  transition-delay: .4s !important;
+}
+
+.second:before,
+.second:after {
+  transition-delay: 1.2s !important;
+}
+
+h4 > span.ov-borders:before {
+  top: -.1em;
+}
+
+.third:before,
+.third:after {
+  transition-delay: 2s !important;
+}
+
+span.ov-borders.inline {
+  display: inline-block;
+}
+
+.scale-up {
+  transition: all 1s ease;
+  transform: scale(.6) !important;
+}
+
+.visible > .scale-up,
+.visible > * > .scale-up,
+.scale-up.visible {
+  transform: scale(1) !important;
+}
+
+.ov-borders {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ov-borders::before,
+.ov-borders::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 2px;
+  /*border: 1px solid white;*/
+  transition: all .6s ease;
+  background-color: white;
+  transition-delay: 200ms;
+}
+
+.ov-borders.visible.strikethrough-after:not(.current-fragment) {
+  opacity: .6 !important;
+}
+
+.ov-borders.visible.strikethrough-after:not(.current-fragment):before,
+.ov-borders.visible.strikethrough-after:not(.current-fragment):after {
+  top: 50%;
+}
+
+.ov-borders.visible.remove-after:not(.current-fragment):before,
+.ov-borders.visible.remove-after:not(.current-fragment):after {
+  opacity: 0;
+}
+
+.ov-borders.visible.underline-after:not(.current-fragment):before,
+.ov-borders.visible.underline-after:not(.current-fragment):after {
+  top: 100%;
+}
+
+.ov-borders.visible:before,
+.ov-borders.visible:after {
+  width: 100%;
+}
+
+.visible > .ov-borders:not(.fragment):before,
+.visible > .ov-borders:not(.fragment):after,
+.visible > * > .ov-borders:not(.fragment):before,
+.visible > * > .ov-borders:not(.fragment):after {
+  width: 100%;
+}
+
+.ov-borders::before {
+  left: 0;
+  top: 0;
+}
+
+.ov-borders::after {
+  top: 100%;
+  right: 0;
+}

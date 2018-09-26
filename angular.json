@@ -29,7 +29,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./reveal/lib/js/head.min.js",
+              "./reveal/js/reveal.js"
+            ]
           },
           "configurations": {
             "production": {
