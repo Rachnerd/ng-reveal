@@ -36,16 +36,24 @@ export class SlideDirective implements OnInit {
 
     this.revealService.addSlideChangedHandler((event) => {
       if (event.currentSlide === this.el.nativeElement) {
-        this.onShowDelay ? setTimeout(() => this.show.emit(), this.onShowDelay) : this.show.emit();
+        this.showSlide();
       } else if (event.previousSlide === this.el.nativeElement) {
-        this.onHideDelay ? setTimeout(() => this.hide.emit(), this.onHideDelay) : this.hide.emit();
+        this.hideSlide();
       }
     });
 
     this.revealService.addReadyHandler((event) => {
       if (event.currentSlide === this.el.nativeElement) {
-        this.onShowDelay ? setTimeout(() => this.show.emit(), this.onShowDelay) : this.show.emit();
+        this.showSlide();
       }
     });
+  }
+
+  hideSlide() {
+    this.onHideDelay ? setTimeout(() => this.hide.emit(), this.onHideDelay) : this.hide.emit();
+  }
+
+  showSlide() {
+    this.onShowDelay ? setTimeout(() => this.show.emit(), this.onShowDelay) : this.show.emit();
   }
 }

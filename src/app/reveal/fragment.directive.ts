@@ -32,14 +32,22 @@ export class FragmentDirective implements OnInit {
 
     this.revealService.addFragmentShownHandler((event) => {
       if (event.fragment === this.el.nativeElement) {
-        this.onShowDelay ? setTimeout(() => this.show.emit(), this.onShowDelay) : this.show.emit();
+        this.showFragment();
       }
     });
 
     this.revealService.addFragmentHiddenHandler((event) => {
       if (event.fragment === this.el.nativeElement) {
-        this.onHideDelay ? setTimeout(() => this.hide.emit(), this.onHideDelay) : this.hide.emit();
+        this.hideFragment();
       }
     });
+  }
+
+  showFragment() {
+    this.onShowDelay ? setTimeout(() => this.show.emit(), this.onShowDelay) : this.show.emit();
+  }
+
+  hideFragment() {
+    this.onHideDelay ? setTimeout(() => this.hide.emit(), this.onHideDelay) : this.hide.emit();
   }
 }

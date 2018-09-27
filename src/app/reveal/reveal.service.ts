@@ -1,23 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+import { REVEAL_CONFIG } from './reveal.config';
 
 @Injectable()
 export class RevealService {
+  constructor(@Inject(REVEAL_CONFIG) private revealConfig: any) {
+  }
+
   init() {
-    Reveal.initialize({
-      display: 'flex',
-      history: true,
-      fragments: true,
-      dependencies: [
-        {src: '../reveal/plugin/markdown/marked.js'},
-        {src: '../reveal/plugin/markdown/markdown.js'},
-        {src: '../reveal/plugin/notes/notes.js', async: true},
-        {
-          src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () {
-            hljs.initHighlightingOnLoad();
-          }
-        }
-      ]
-    });
+    Reveal.initialize(this.revealConfig);
   }
 
   nextFragment() {
