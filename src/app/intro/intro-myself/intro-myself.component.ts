@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RevealPage } from '../reveal/reveal-page-base.class';
+import { RevealPage } from '../../reveal/reveal-page-base.class';
 
 @Component({
   selector: 'rvl-intro-myself',

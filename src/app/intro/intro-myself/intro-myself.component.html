@@ -1,0 +1,14 @@
+<section rvlSlide="intro.jpeg" data-hide-logo="true" [onShowDelay]="800" (show)="nextFragment()">
+  <div class="profile-image fade-up" rvlFragment [showDuration]="800" [onShowDelay]="400" (show)="nextFragment()">
+    <img src="../../../assets/profile.jpg">
+  </div>
+  <div class="profile-description fade-up" rvlFragment [showDuration]="800" [onHideDelay]="400" (hide)="prevFragment()">
+    <p class="profile-description__name">Rachèl Heimbach</p>
+    <p class="profile-description__title">Fullstack developer</p>
+    <p class="profile-description__company">
+        <span class="ov-borders scale-up">
+            <img src="../../../assets/openvalue-white.png"/>
+        </span>
+    </p>
+  </div>
+</section>

@@ -1,10 +1,10 @@
-import { Directive, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { RevealService } from './reveal.service';
 
 @Directive({
   selector: '[rvlFragment]'
 })
-export class FragmentDirective {
+export class FragmentDirective implements OnInit {
 
   @Input()
   onShowDelay: number;
@@ -12,23 +12,32 @@ export class FragmentDirective {
   @Input()
   onHideDelay: number;
 
+  @Input()
+  showDuration: number;
+
   @Output()
   show = new EventEmitter<void>();
 
   @Output()
   hide = new EventEmitter<void>();
 
-  constructor(el: ElementRef, revealService: RevealService) {
-    el.nativeElement.classList.add('fragment');
+  constructor(private el: ElementRef, private revealService: RevealService) {
+  }
 
-    revealService.addFragmentShownHandler((event) => {
-      if (event.fragment === el.nativeElement) {
+  ngOnInit(): void {
+    this.el.nativeElement.classList.add('fragment');
+    if (this.showDuration) {
+      this.el.nativeElement.style.transitionDuration = `${this.showDuration}ms`;
+    }
+
+    this.revealService.addFragmentShownHandler((event) => {
+      if (event.fragment === this.el.nativeElement) {
         this.onShowDelay ? setTimeout(() => this.show.emit(), this.onShowDelay) : this.show.emit();
       }
     });
 
-    revealService.addFragmentHiddenHandler((event) => {
-      if (event.fragment === el.nativeElement) {
+    this.revealService.addFragmentHiddenHandler((event) => {
+      if (event.fragment === this.el.nativeElement) {
         this.onHideDelay ? setTimeout(() => this.hide.emit(), this.onHideDelay) : this.hide.emit();
       }
     });
