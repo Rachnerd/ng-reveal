@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { IntroSlideComponent } from './intro-slide/intro-slide.component';
 import { IntroMyselfComponent } from './intro-myself/intro-myself.component';
 import { FragmentDirective } from './reveal/fragment.directive';
-import { BackgroundImageDirective } from './reveal/background-image.directive';
+import { SlideDirective } from './reveal/slide.directive';
+import { RevealService } from './reveal/reveal.service';
 
 @NgModule({
   declarations: [
@@ -13,12 +14,12 @@ import { BackgroundImageDirective } from './reveal/background-image.directive';
     IntroSlideComponent,
     IntroMyselfComponent,
     FragmentDirective,
-    BackgroundImageDirective
+    SlideDirective
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [RevealService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

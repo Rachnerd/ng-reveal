@@ -1,10 +1,9 @@
 import { ElementRef, Inject, OnInit } from '@angular/core';
-
-declare const Reveal;
+import { RevealService } from './reveal.service';
 
 export class RevealPage implements OnInit {
 
-  constructor(@Inject(ElementRef) elementRef: ElementRef) {
+  constructor(@Inject(ElementRef) elementRef: ElementRef, private revealService: RevealService) {
     const ngOnInit = this.ngOnInit;
     this.ngOnInit = () => {
       const element = elementRef.nativeElement;
@@ -19,10 +18,10 @@ export class RevealPage implements OnInit {
   }
 
   public nextFragment() {
-    Reveal.nextFragment();
+    this.revealService.nextFragment();
   }
 
   public prevFragment() {
-    Reveal.prevFragment();
+    this.revealService.prevFragment();
   }
 }

@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ViewEncapsulation } from '@angular/core';
+import { RevealService } from './reveal/reveal.service';
 
 declare const Reveal;
 declare const hljs;
@@ -9,24 +10,13 @@ declare const hljs;
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'ng-reveal';
 
+  constructor(private revealService: RevealService) {
+  }
+
   ngAfterViewInit() {
-    Reveal.initialize({
-      display: 'flex',
-      history: true,
-      fragments: true,
-      dependencies: [
-        {src: '../reveal/plugin/markdown/marked.js'},
-        {src: '../reveal/plugin/markdown/markdown.js'},
-        {src: '../reveal/plugin/notes/notes.js', async: true},
-        {
-          src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () {
-            hljs.initHighlightingOnLoad();
-          }
-        }
-      ]
-    });
+    this.revealService.init();
   }
 }

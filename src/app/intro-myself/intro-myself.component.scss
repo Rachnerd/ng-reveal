@@ -1,62 +1,37 @@
-
-.intro-myself {
-  min-height: 100%;
-  width: 60% !important;
-  display: flex;
-  flex-wrap: wrap;
+section {
   flex-direction: row;
+  width: 60% !important;
 }
 
-.intro-myself div {
+.profile-image {
   flex-basis: calc(50%);
-}
-
-.open-value {
-  /*width: 500px;*/
-}
-
-.vertical-divider {
-  width: 1em;
-}
-
-.intro-slide__profile-pic {
-  align-self: center;
-  /*width: 300px;*/
-  padding: 2em;
-}
-
-.intro-slide__profile-pic img {
-  border-radius: 50%;
-}
-
-.intro-slide__profile-name {
-  font-size: .8em !important;
-}
-
-.intro-slide__profile-details {
-  text-align: center;
   justify-content: center;
-  padding-top: 1em !important;
+
+  img {
+    border-radius: 50%;
+    width: 200px;
+  }
 }
 
-.intro-slide__profile-details img {
-  margin: 0 !important;
-  width: 200px !important;
-}
-
-.intro-slide__profile-details p {
-  margin: 0;
-}
-
-.intro-slide__profile-title {
-  font-size: .6em !important;
-}
-
-.intro-slide__profile-company {
-  font-size: .6em !important;
-}
-
-.intro-slide__profile-company img {
-  margin: 0 !important;
-  margin-top: .4em !important;
+.profile-description {
+  flex-basis: calc(50%);
+  justify-content: center;
+  p {
+    margin: 0;
+  }
+  &__name {
+    font-size: .8em !important;
+  }
+  &__title {
+    font-size: .6em !important
+  }
+  &__company {
+    width: 160px;
+    display: inline-block;
+    img {
+      margin-bottom: .2em;
+      margin-top: .2em;
+      width: 100%;
+    }
+  }
 }
