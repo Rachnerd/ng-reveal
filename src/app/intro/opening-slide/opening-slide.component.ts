@@ -7,11 +7,4 @@ import { RevealPage } from '../../reveal/reveal-page-base.class';
   styleUrls: ['./opening-slide.component.scss']
 })
 export class OpeningSlideComponent extends RevealPage {
-  showLogo() {
-    console.log('Show');
-  }
-
-  hideLogo() {
-    console.log('Hide');
-  }
 }

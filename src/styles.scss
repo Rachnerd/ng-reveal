@@ -3,4 +3,14 @@
 @import "../reveal/lib/css/zenburn.css";
 @import "../reveal/css/theme/black.css";
 
+body {
+  height: 100% !important;
+}
 
+.reveal {
+  height: 100% !important;
+}
+
+.slides {
+  height: 100% !important;
+}

@@ -1,0 +1,71 @@
+<section rvlSlide="business.jpg" class="business-case">
+
+  <div class="business-case__container">
+    <div class="business-case__brand business-case__brand1" [ngClass]="{'business-case__brand-visible': isVisible, 'business-case__brand-large': isExpanded}">
+      <img class="business-case__img business-case__img-responsive" src="../../../assets/console.png">
+      <div rvlFragment (show)="show()" (hide)="hide()"></div>
+      <div rvlFragment [nextDelay]="400" [autoNext]="true" (show)="expand()" (hide)="shrink()"></div>
+      <div class="business-case__img-container">
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="business-case__container">
+    <div class="business-case__brand business-case__brand1" [ngClass]="{'business-case__brand-visible': isVisible, 'business-case__brand-large': isExpanded}">
+      <img class="business-case__img business-case__img-responsive" src="../../../assets/console.png">
+      <div class="business-case__img-container">
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+        <div rvlFragment [nextDelay]="600" [autoNext]="false">
+          <img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="business-case__container">-->
+    <!--<div class="business-case__brand business-case__brand2" [ngClass]="{'business-case__brand-visible': isVisible, 'business-case__brand-large': isExpanded}">-->
+      <!--<img class="business-case__img business-case__img-suit" src="../../../assets/suit.png">-->
+      <!--<div class="business-case__img-container">-->
+        <!--<div>-->
+          <!--<img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">-->
+        <!--</div>-->
+
+        <!--<div>-->
+          <!--<img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<img class="business-case__img business-case__img-responsive" src="../../../assets/responsive2.png">-->
+        <!--</div>-->
+
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+</section>

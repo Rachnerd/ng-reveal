@@ -1,0 +1,97 @@
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-case {
+  &__container {
+    flex-basis: calc(50%);
+    justify-content: center;
+    padding: 1em;
+  }
+  &__brand {
+    transition: 1s all ease;
+    opacity: 0;
+    overflow: hidden;
+    background-size: 200% 200%;
+    padding: .4em;
+
+    &1 {
+      background-image: linear-gradient(to bottom, transparent 50%, rgba(73, 125, 37, .8) 50%);
+    }
+
+    &-visible {
+      opacity: 1;
+      max-height: 2em;
+
+    }
+
+    &-large {
+      max-height: 30vh;
+      background-position: 100% 100%;
+    }
+
+    &2 {
+      background-image: linear-gradient(to bottom, transparent 50%, rgba(133, 133, 133, .8) 50%);
+    }
+  }
+  &__img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    div {
+      flex-basis: calc(50%);
+    }
+  }
+  &__img {
+    width: 2em;
+    &-suit {
+      width: 1.6em;
+      margin: .2em;
+    }
+  }
+}
+
+.test {
+  background-color: grey;
+}
+
+.company-container {
+  flex-basis: calc(50%);
+  //display: flex;
+  justify-content: center;
+  transition: 1s all ease;
+  //max-height: 2.4em;
+  overflow: hidden;
+
+  &-large {
+    //max-height: 70vh;
+    ////top: -5em;
+    ////max-height: 100%;
+    //width: 50%;
+    //opacity: .8;
+  }
+}
+
+//.box {
+//  width: 200px; height: 100px;
+//  background-size: 100% 200%;
+//  background-image: linear-gradient(to bottom, red 50%, black 50%);
+//  transition: background-position 1s;
+//}
+//
+//.box:hover {
+//  background-position: 0 -100%;
+//}
+
+.brand {
+  transition: 1s all ease;
+  width: 50%;
+
+  &-large {
+    width: 100%;
+  }
+}
+

@@ -1,8 +1,8 @@
 <section rvlSlide="intro.jpeg" data-hide-logo="true" [onShowDelay]="800" (show)="nextFragment()">
-  <div class="profile-image fade-up" rvlFragment [showDuration]="800" [onShowDelay]="400" (show)="nextFragment()">
+  <div class="profile-image fade-up" rvlFragment [duration]="800" [nextDelay]="400" [autoNext]="true">
     <img src="../../../assets/profile.jpg">
   </div>
-  <div class="profile-description fade-up" rvlFragment [showDuration]="800" [onHideDelay]="400" (hide)="prevFragment()">
+  <div class="profile-description fade-up" rvlFragment [duration]="800" [backDelay]="400"  [autoBack]="true">
     <p class="profile-description__name">Rachèl Heimbach</p>
     <p class="profile-description__title">Fullstack developer</p>
     <p class="profile-description__company">

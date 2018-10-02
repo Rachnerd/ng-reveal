@@ -15,9 +15,7 @@ export class RevealPage implements OnInit {
     const ngOnInit = this.ngOnInit;
     this.ngOnInit = () => {
       const element = elementRef.nativeElement;
-      element.parentNode
-        .appendChild(element.firstChild);
-      element.parentNode.removeChild(element);
+      element.parentNode.replaceChild(element.firstChild, element);
       ngOnInit();
     };
   }
@@ -25,11 +23,11 @@ export class RevealPage implements OnInit {
   ngOnInit(): void {
   }
 
-  public nextFragment() {
+  nextFragment() {
     this.revealService.nextFragment();
   }
 
-  public prevFragment() {
+  prevFragment() {
     this.revealService.prevFragment();
   }
 }

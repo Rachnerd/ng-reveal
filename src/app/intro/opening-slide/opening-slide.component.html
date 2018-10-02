@@ -1,6 +1,6 @@
 <section rvlSlide="speaker.png" data-hide-logo="true">
-  <div class="ov-borders scale-up first" rvlFragment [onShowDelay]="800" (show)="nextFragment()">
+  <div class="ov-borders scale-up first" rvlFragment [nextDelay]="600" [autoNext]="true">
     <img src="../../../assets/openvalue-white.png"/>
   </div>
-  <p rvlFragment [onHideDelay]="800" (hide)="prevFragment()">Better software, faster.</p>
+  <p rvlFragment [backDelay]="800" [autoBack]="true">Better software, faster.</p>
 </section>

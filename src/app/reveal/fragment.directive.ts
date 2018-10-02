@@ -7,13 +7,19 @@ import { RevealService } from './reveal.service';
 export class FragmentDirective implements OnInit {
 
   @Input()
-  onShowDelay: number;
+  nextDelay: number;
 
   @Input()
-  onHideDelay: number;
+  backDelay: number;
 
   @Input()
-  showDuration: number;
+  duration: number;
+
+  @Input()
+  autoNext = false;
+
+  @Input()
+  autoBack = false;
 
   @Output()
   show = new EventEmitter<void>();
@@ -26,28 +32,47 @@ export class FragmentDirective implements OnInit {
 
   ngOnInit(): void {
     this.el.nativeElement.classList.add('fragment');
-    if (this.showDuration) {
-      this.el.nativeElement.style.transitionDuration = `${this.showDuration}ms`;
+    if (this.duration) {
+      this.el.nativeElement.style.transitionDuration = `${this.duration}ms`;
     }
 
     this.revealService.addFragmentShownHandler((event) => {
       if (event.fragment === this.el.nativeElement) {
-        this.showFragment();
+        this.fragmentShown();
       }
     });
 
     this.revealService.addFragmentHiddenHandler((event) => {
       if (event.fragment === this.el.nativeElement) {
-        this.hideFragment();
+        this.fragmentHidden();
       }
     });
   }
 
-  showFragment() {
-    this.onShowDelay ? setTimeout(() => this.show.emit(), this.onShowDelay) : this.show.emit();
+  private fragmentShown() {
+    this.isFragmentReady(this.duration)
+      .then(() => this.show.emit());
+    if (this.autoNext) {
+      this.isFragmentReady(this.nextDelay)
+        .then(() => this.revealService.nextFragment());
+    }
   }
 
-  hideFragment() {
-    this.onHideDelay ? setTimeout(() => this.hide.emit(), this.onHideDelay) : this.hide.emit();
+  private isFragmentReady(duration) {
+    return new Promise(resolve => duration ? setTimeout(() => resolve(), duration) : resolve());
+  }
+
+  private fragmentHidden() {
+    this.isFragmentReady(this.duration)
+      .then(() => this.hide.emit());
+
+    if (this.autoBack) {
+      this.isFragmentReady(this.backDelay)
+        .then(() => this.revealService.prevFragment());
+    }
+  }
+
+  private hideFragment() {
+    this.backDelay ? setTimeout(() => this.hide.emit(), this.backDelay) : this.hide.emit();
   }
 }
