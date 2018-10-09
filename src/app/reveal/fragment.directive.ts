@@ -54,7 +54,7 @@ export class FragmentDirective implements OnInit {
       .then(() => this.show.emit());
     if (this.autoNext) {
       this.isFragmentReady(this.nextDelay)
-        .then(() => this.revealService.nextFragment());
+        .then(() => this.revealService.nextSlide());
     }
   }
 
@@ -68,11 +68,7 @@ export class FragmentDirective implements OnInit {
 
     if (this.autoBack) {
       this.isFragmentReady(this.backDelay)
-        .then(() => this.revealService.prevFragment());
+        .then(() => this.revealService.prevSlide());
     }
-  }
-
-  private hideFragment() {
-    this.backDelay ? setTimeout(() => this.hide.emit(), this.backDelay) : this.hide.emit();
   }
 }

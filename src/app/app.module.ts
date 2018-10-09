@@ -6,6 +6,7 @@ import { RevealService } from './reveal/reveal.service';
 import { IntroModule } from './intro/intro.module';
 import { ContextModule } from './context/context.module';
 import { RevealModule } from './reveal/reveal.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,11 @@ import { RevealModule } from './reveal/reveal.module';
     BrowserModule,
     IntroModule,
     ContextModule,
+    CoreModule,
     RevealModule.forRoot({
       display: 'flex',
       history: true,
-      fragments: false,
+      fragments: true,
       dependencies: [
         {src: '../reveal/plugin/markdown/marked.js'},
         {src: '../reveal/plugin/markdown/markdown.js'},

@@ -1,12 +1,8 @@
-section {
-  flex-direction: row;
-  width: 60% !important;
-}
-
 .profile-image {
-  flex-basis: calc(50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
-
   img {
     border-radius: 50%;
     width: 200px;
@@ -14,7 +10,9 @@ section {
 }
 
 .profile-description {
-  flex-basis: calc(50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   p {
     margin: 0;

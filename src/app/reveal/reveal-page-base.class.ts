@@ -30,4 +30,17 @@ export class RevealPage implements OnInit {
   prevFragment() {
     this.revealService.prevFragment();
   }
+
+
+  nextSlide() {
+    this.revealService.nextSlide();
+  }
+
+  prevSlide() {
+    this.revealService.prevSlide();
+  }
+
+  isFragmentsEnabled() {
+    return this.revealService.isFragmentsEnabled();
+  }
 }

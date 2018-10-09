@@ -18,6 +18,14 @@ export class RevealService {
     Reveal.prevFragment();
   }
 
+  nextSlide() {
+    Reveal.next();
+  }
+
+  prevSlide() {
+    Reveal.prev();
+  }
+
   addFragmentShownHandler(handler) {
     Reveal.addEventListener('fragmentshown', handler);
   }
@@ -32,5 +40,9 @@ export class RevealService {
 
   addReadyHandler(handler) {
     Reveal.addEventListener('ready', handler);
+  }
+
+  isFragmentsEnabled() {
+    return this.revealConfig.fragments;
   }
 }

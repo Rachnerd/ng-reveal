@@ -7,8 +7,8 @@ import { RevealPage } from '../../reveal/reveal-page-base.class';
   styleUrls: ['./context-business-case.component.scss']
 })
 export class ContextBusinessCaseComponent extends RevealPage {
-  isExpanded = false;
-  isVisible = false;
+  isExpanded = !this.isFragmentsEnabled();
+  isVisible = !this.isFragmentsEnabled();
 
   expand() {
     this.isExpanded = true;

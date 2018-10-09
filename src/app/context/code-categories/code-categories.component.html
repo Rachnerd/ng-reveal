@@ -1,0 +1,76 @@
+<section class="code-categories-slide" rvlSlide="business.jpg">
+    <div class="code-categories-slide__sphere-container">
+    <div class="code-categories-slide__sphere code-categories-slide__sphere-core" rvlFragment
+         [ngClass]="{'code-categories-slide__sphere-core--expand': expand}">
+      <p *ngIf="!showHabitica; else habitica">Core</p>
+      <ng-template #habitica>
+        <img class="code-categories-slide__image" src="../../../assets/habitica.png"
+             [ngClass]="{'code-categories-slide__image--show': showHabiticaImage}"/>
+      </ng-template>
+    </div>
+    <div
+      class="code-categories-slide__sphere code-categories-slide__sphere-brand1 code-categories-slide__sphere-brand1-1"
+      rvlFragment>
+      <img *ngIf="!showStack; else stack1" src="../../../assets/responsive2.png"/>
+      <ng-template #stack1>
+        <img class="code-categories-slide__image" src="../../../assets/angular.png"
+             [ngClass]="{'code-categories-slide__image--show': showStackImage}"/>
+      </ng-template>
+    </div>
+    <div
+      class="code-categories-slide__sphere code-categories-slide__sphere-brand1 code-categories-slide__sphere-brand1-2"
+      rvlFragment>
+      <img *ngIf="!showStack; else stack2" src="../../../assets/mobile-white.png"/>
+      <ng-template #stack2>
+        <img class="code-categories-slide__image" src="../../../assets/nativescript-angular.png"
+             [ngClass]="{'code-categories-slide__image--show': showStackImage}"/>
+      </ng-template>
+    </div>
+    <div class="code-categories-slide__sphere code-categories-slide__sphere-brand2" rvlFragment>
+      <img *ngIf="!showStack; else stack3" src="../../../assets/responsive2.png"/>
+      <ng-template #stack3>
+        <img class="code-categories-slide__image" src="../../../assets/angular.png"
+             [ngClass]="{'code-categories-slide__image--show': showStackImage}"/>
+      </ng-template>
+    </div>
+    <div class="code-categories-slide__sphere code-categories-slide__sphere-other" rvlFragment>
+      <h1>...</h1>
+    </div>
+  </div>
+  <div rvlFragment (show)="showHabitica = true" (hide)="showHabitica = false" [autoNext]="true"
+       [autoBack]="true" [nextDelay]="100"></div>
+  <div rvlFragment (show)="showHabiticaImage = true" (hide)="showHabiticaImage = false"></div>
+  <div rvlFragment (show)="showStack = true" (hide)="showStack = false" [autoNext]="true"
+       [autoBack]="true" [nextDelay]="100"></div>
+  <div rvlFragment (show)="showStackImage = true" (hide)="showStackImage = false"></div>
+  <div rvlFragment (show)="expand = true" (hide)="expand = false" [autoNext]="true"></div>
+  <div rvlFragment (show)="hideBackground = true; beforeNextSlide()"
+       (hide)="hideBackground = false; backFromNextSlide()" [autoNext]="true" [autoBack]="true"></div>
+  <div rvlFragment [nextDelay]="800" [autoNext]="true" [autoBack]="true"></div>
+</section>
+
+
+<!--<section>-->
+<!--<h4>Code categories</h4>-->
+<!--<ul>-->
+<!--<li>Functionality</li>-->
+<!--<ul>-->
+<!--<li>Authentication</li>-->
+<!--<li>Backend communication</li>-->
+<!--<li>Core functionality</li>-->
+<!--</ul>-->
+<!--<li>State (ngRx)</li>-->
+<!--<ul>-->
+<!--<li>Data</li>-->
+<!--<li>Actions</li>-->
+<!--<li>Effects</li>-->
+<!--</ul>-->
+<!--<li>Look & feel</li>-->
+<!--<ul>-->
+<!--<li>UI</li>-->
+<!--<li>UX</li>-->
+<!--<li>Cross platform app</li>-->
+<!--</ul>-->
+
+<!--</ul>-->
+<!--</section>-->

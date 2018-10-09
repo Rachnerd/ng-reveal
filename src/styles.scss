@@ -3,6 +3,36 @@
 @import "../reveal/lib/css/zenburn.css";
 @import "../reveal/css/theme/black.css";
 
+/**
+  * Grid settings
+  * Overrides the default Bootstrap settings with our own custom values
+  * The sizes have been overridden to match desired outcome of container widths
+*/
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1248px // desired inner width (1200px) = 1200px + 16px*2(desired space before breaking) + padding(8px*2))
+);
+
+$container-max-widths: (
+  //sm: none,
+  md: 736px,
+  lg: 992px,
+  xl: 1216px
+);
+
+$enable-grid-classes: true;
+$grid-columns: 12;
+$grid-gutter-width: 32px;
+
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/mixins/grid-framework";
+@import "~bootstrap/scss/mixins/grid";
+@import "~bootstrap/scss/grid";
+
 body {
   height: 100% !important;
 }
@@ -13,4 +43,15 @@ body {
 
 .slides {
   height: 100% !important;
+}
+
+.reveal .slide-background.present.test {
+  opacity: 0 !important
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;;
 }

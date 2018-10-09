@@ -1,14 +1,32 @@
-<section rvlSlide="intro.jpeg" data-hide-logo="true" [onShowDelay]="800" (show)="nextFragment()">
-  <div class="profile-image fade-up" rvlFragment [duration]="800" [nextDelay]="400" [autoNext]="true">
-    <img src="../../../assets/profile.jpg">
+<section rvlSlide="intro.jpeg" data-hide-logo="true">
+  <!--<div class="profile-image fade-up" rvlFragment [duration]="800" [nextDelay]="400" [autoNext]="true">-->
+  <!--<img src="../../../assets/profile.jpg">-->
+  <!--</div>-->
+  <!--<div class="profile-description fade-up" rvlFragment [duration]="800" [backDelay]="400"  [autoBack]="true">-->
+  <!--<p class="profile-description__name">Rachèl Heimbach</p>-->
+  <!--<p class="profile-description__title">Fullstack developer</p>-->
+  <!--<p class="profile-description__company">-->
+  <!--<span class="ov-borders scale-up">-->
+  <!--<img src="../../../assets/openvalue-white.png"/>-->
+  <!--</span>-->
+  <!--</p>-->
+  <!--</div>-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-4 profile-image fade-up" rvlFragment>
+        <img src="../../../assets/profile.jpg">
+      </div>
+      <div class="col-4 profile-description fade-up" rvlFragment>
+        <p class="profile-description__name">Rachèl Heimbach</p>
+        <p class="profile-description__title">Fullstack developer</p>
+        <p class="profile-description__company">
+          <span class="ov-borders scale-up">
+              <img src="../../../assets/openvalue-white.png"/>
+          </span>
+        </p>
+      </div>
+    </div>
   </div>
-  <div class="profile-description fade-up" rvlFragment [duration]="800" [backDelay]="400"  [autoBack]="true">
-    <p class="profile-description__name">Rachèl Heimbach</p>
-    <p class="profile-description__title">Fullstack developer</p>
-    <p class="profile-description__company">
-        <span class="ov-borders scale-up">
-            <img src="../../../assets/openvalue-white.png"/>
-        </span>
-    </p>
-  </div>
+
 </section>

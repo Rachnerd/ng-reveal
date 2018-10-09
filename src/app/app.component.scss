@@ -16,6 +16,7 @@ body {
   right: 10px;
   transition: all 1s ease;
   width: 100px;
+  z-index: 10;
 }
 
 #logo img {
@@ -26,7 +27,16 @@ body {
   width: 100%;
 }
 
+
 .slide-background.blur {
+  -webkit-filter: saturate(.5) brightness(.8);
+  -moz-filter: saturate(.7) brightness(.9);
+  -o-filter: saturate(.7) brightness(.9);
+  -ms-filter: saturate(.7) brightness(.9);
+  filter: saturate(.7) brightness(.5);
+}
+
+.blur-image {
   -webkit-filter: saturate(.5) brightness(.8);
   -moz-filter: saturate(.7) brightness(.9);
   -o-filter: saturate(.7) brightness(.9);
