@@ -160,12 +160,12 @@ span.ov-borders.inline {
   width: 100%;
 }
 
-.visible > .ov-borders:not(.fragment):before,
-.visible > .ov-borders:not(.fragment):after,
-.visible > * > .ov-borders:not(.fragment):before,
-.visible > * > .ov-borders:not(.fragment):after {
-  width: 100%;
-}
+//.visible > .ov-borders:not(.fragment):before,
+//.visible > .ov-borders:not(.fragment):after,
+//.visible > * > .ov-borders:not(.fragment):before,
+//.visible > * > .ov-borders:not(.fragment):after {
+//  width: 100%;
+//}
 
 .ov-borders::before {
   left: 0;

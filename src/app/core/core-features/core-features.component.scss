@@ -1,0 +1,25 @@
+img {
+  height: 8em;
+  border: 2px solid white;
+}
+
+.core-row {
+  border: 0;
+  transition: all .6s ease;
+  padding: {
+    top: .5em;
+    bottom: .5em;
+  }
+}
+
+.transparent {
+  opacity: .6;
+}
+
+.transparent::before, .purple::after {
+  opacity: 0;
+}
+
+.highlight {
+  //border: 1px solid white;
+}
