@@ -1,8 +1,4 @@
-$sphere-opacity: 0.4;
-$core: rgb(66, 37, 117);
-$core-transparent: rgba(66, 37, 117, $sphere-opacity);
-$brand1: rgb(0, 123, 0);
-$brand1-transparent: rgba(0, 123, 0, $sphere-opacity);
+@import "~src/variables";
 
 .code-categories-slide {
   &__sphere {
@@ -40,7 +36,7 @@ $brand1-transparent: rgba(0, 123, 0, $sphere-opacity);
     }
 
     &-brand2 {
-      background-color: rgba(123, 123, 123, $sphere-opacity);
+      background-color: $brand2-transparent;
       img {
         width: 2em;
       }
@@ -49,11 +45,12 @@ $brand1-transparent: rgba(0, 123, 0, $sphere-opacity);
     }
 
     &-core {
-      background-color: $core;
+      background-color: $core-transparent;
       width: 6em;
       height: 6em;
       top: 3em;
       transition: all 1s ease !important;
+      z-index: 2;
       &--expand {
         img, p {
           opacity: 0;

@@ -1,0 +1,63 @@
+@import "~src/variables";
+
+img {
+  height: 4em;
+}
+
+.square {
+  height: 4em;
+  width: 4.2em;
+}
+
+.brand1 {
+  background-color: $brand1;
+}
+
+.brand2 {
+  background-color: $brand2
+}
+
+.images-container {
+  padding-top: 2em;
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  transition: all 1s ease;
+}
+
+.background {
+  //position: absolute;
+  opacity: 0;
+  padding: 1em;
+  transition: all 1s ease;
+  border-radius: 1em;
+}
+
+.desktop {
+  img {
+    width: 80%;
+  }
+  padding: {
+    top: 1em;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+  }
+}
+
+.one{
+  background-image: -webkit-linear-gradient(30deg, $brand1 50%, $brand1 50%);
+  opacity: 1;
+}
+
+.two{
+  background-image: -webkit-linear-gradient(45deg, $brand1 50%, $brand2 50%);
+  opacity: 1;
+}
+
+
+.three{
+  background-image: -webkit-linear-gradient(90deg, $brand1 50%, $brand2 50%);
+  opacity: 1;
+}

@@ -1,0 +1,88 @@
+@import "~src/variables";
+
+.background {
+  //position: absolute;
+  //opacity: 0;
+  //padding: 1em;
+  //width: 100%;
+  transition: all 1s ease;
+  p {
+    margin: 0;
+  }
+  border-radius: .5em;
+  padding: .5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  height: 1.6em;
+  padding: .4em;
+}
+.col-4 {
+  padding: 1em;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+}
+
+.one {
+  background-image: -webkit-linear-gradient(30deg, $brand1 50%, $brand1 50%);
+  opacity: 1;
+}
+
+.two {
+  background-image: -webkit-linear-gradient(0deg, $brand1 50%, $brand2 50%);
+  opacity: 1;
+}
+
+.three {
+  background-image: -webkit-linear-gradient(30deg, $brand2 50%, $brand2 50%);
+  opacity: 1;
+}
+.grey {
+  background-color: grey;
+  opacity: 1;
+}
+
+.core {
+  background-color: $core;
+  opacity: 1;
+}
+
+
+.top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: {
+    bottom: 0;
+  }
+}
+
+.middle {
+  border-radius: 0;
+  padding: {
+    top: 0;
+    bottom: 0;
+  }
+}
+.bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  padding: {
+    top: 0;
+  }
+}
+
+.second {
+  margin-top: 1em;
+}
+
+.divider {
+  height: 2.4em;
+}

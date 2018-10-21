@@ -16,7 +16,7 @@ img {
   opacity: .6;
 }
 
-.transparent::before, .purple::after {
+.transparent::before, .transparent::after {
   opacity: 0;
 }
 
