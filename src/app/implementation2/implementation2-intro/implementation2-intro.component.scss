@@ -1,0 +1,100 @@
+@import "~src/variables";
+
+.code-categories-slide {
+  &__sphere {
+    &-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    position: absolute;
+    border: 0 solid black;
+    width: 6em;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &-brand1 {
+      background-color: $brand1-transparent;
+      border-color: $brand1;
+
+      transition: all 1s ease !important;
+      img {
+        width: 2em;
+      }
+      &-1 {
+        top: 1em;
+        right: 1em;
+      }
+      &-2 {
+        right: 1em;
+        top: 5.5em;
+      }
+      &--expand {
+        img, p {
+          opacity: 0;
+          transition: none;
+        }
+        background-color: $brand1;
+        z-index: 2;
+        transform: scale(10);
+      }
+    }
+
+    &-brand2 {
+      background-color: $brand2-transparent;
+      transition: all 1s ease !important;
+      img {
+        width: 2em;
+      }
+      left: .5em;
+      top: .5em;
+
+      &--expand {
+        img, p {
+          opacity: 0;
+          transition: none;
+        }
+        background-color: $brand2;
+        z-index: 2;
+        transform: scale(10);
+      }
+    }
+
+    &-core {
+      background-color: $core-transparent;
+      width: 6em;
+      height: 6em;
+      top: 3em;
+      transition: all 1s ease !important;
+      z-index: 2;
+      &--expand {
+        img, p {
+          opacity: 0;
+          transition: none;
+        }
+        background-color: $core;
+        z-index: 2;
+        transform: scale(10);
+      }
+    }
+
+    &-other {
+      background-color: rgba(0, 0, 0, $sphere-opacity);
+      left: .8em;
+      top: 6.5em;
+    }
+  }
+  &__image {
+    opacity: 0;
+    width: 300px;
+    transition: all .6s ease;
+    &--show {
+      opacity: 1;
+    }
+  }
+}

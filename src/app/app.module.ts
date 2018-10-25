@@ -7,6 +7,8 @@ import { IntroModule } from './intro/intro.module';
 import { ContextModule } from './context/context.module';
 import { RevealModule } from './reveal/reveal.module';
 import { CoreModule } from './core/core.module';
+import { ImplementationModule } from './implementation/implementation.module';
+import { Implementation2Module } from './implementation2/implementation2.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { CoreModule } from './core/core.module';
     IntroModule,
     ContextModule,
     CoreModule,
+    ImplementationModule,
+    Implementation2Module,
     RevealModule.forRoot({
       display: 'flex',
       history: true,

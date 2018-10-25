@@ -1,0 +1,56 @@
+<section class="code-categories-slide" style="padding-top: 2em" data-background-color="rgb(39,39,39)">
+  <div class="code-categories-slide__sphere-container">
+    <div class="code-categories-slide__sphere code-categories-slide__sphere-core"
+         [ngClass]="{'code-categories-slide__sphere-core--expand': expand}">
+      <img class="code-categories-slide__image" src="../../../assets/habitica.png"
+           [ngClass]="{'code-categories-slide__image--show': true}"/>
+    </div>
+    <div
+      class="code-categories-slide__sphere code-categories-slide__sphere-brand1 code-categories-slide__sphere-brand1-1"
+      [ngClass]="{'code-categories-slide__sphere-brand1--expand': expand2}">
+      <img class="code-categories-slide__image" src="../../../assets/angular.png"
+           [ngClass]="{'code-categories-slide__image--show': true}"/>
+    </div>
+    <div
+      class="code-categories-slide__sphere code-categories-slide__sphere-brand1 code-categories-slide__sphere-brand1-2"
+      [ngClass]="{'code-categories-slide__sphere-brand1--expand': expand2}">
+      <img class="code-categories-slide__image" src="../../../assets/nativescript-angular.png"
+           [ngClass]="{'code-categories-slide__image--show': true}"/>
+    </div>
+    <div class="code-categories-slide__sphere code-categories-slide__sphere-brand2">
+      <img class="code-categories-slide__image" src="../../../assets/angular.png"
+           [ngClass]="{'code-categories-slide__image--show': true}"/>
+    </div>
+    <div class="code-categories-slide__sphere code-categories-slide__sphere-other">
+      <h1>...</h1>
+    </div>
+  </div>
+  <div rvlFragment (show)="expand = false" (hide)="expand = true"></div>
+  <div rvlFragment (show)="expand2 = true" (hide)="expand2 = false"></div>
+</section>
+
+
+<!--<section>-->
+<!--<h4>Code categories</h4>-->
+<!--<ul>-->
+<!--<li>Functionality</li>-->
+<!--<ul>-->
+<!--<li>Authentication</li>-->
+<!--<li>Backend communication</li>-->
+<!--<li>Core functionality</li>-->
+<!--</ul>-->
+<!--<li>State (ngRx)</li>-->
+<!--<ul>-->
+<!--<li>Data</li>-->
+<!--<li>Actions</li>-->
+<!--<li>Effects</li>-->
+<!--</ul>-->
+<!--<li>Look & feel</li>-->
+<!--<ul>-->
+<!--<li>UI</li>-->
+<!--<li>UX</li>-->
+<!--<li>Cross platform app</li>-->
+<!--</ul>-->
+
+<!--</ul>-->
+<!--</section>-->

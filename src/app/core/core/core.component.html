@@ -1,4 +1,4 @@
-<section>
+<section  data-background-color="rgb(66,37,117)">
   <rvl-core-intro></rvl-core-intro>
   <rvl-core-what></rvl-core-what>
   <rvl-core-api></rvl-core-api>
@@ -43,33 +43,93 @@
   <rvl-core-features></rvl-core-features>
 
   <rvl-core-module></rvl-core-module>
-  <section>
-    <p>Angular cli repo (versioning)</p>
-    <p>ng new habitica-repo</p>
-    <p>ng g lib core</p>
-    <p>npm i --save @ngrx/store</p>
-    <p>npm i --save @ngrx/effects</p>
+  <section data-background-color="rgb(66,37,117)">
+    <h2>Create core repo</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 center">
+          <pre><code class="bash">ng new ng-habitica
+npm i --save @ngrx/store
+npm i --save @ngrx/effects
+ng g lib core</code></pre>
+        </div>
+        <div class="col-6 center" style="height: 300px">
+            <img alt="repo image">
+        </div>
+      </div>
+    </div>
   </section>
-  <section>
-    <p>Demo services</p>
-    <p>Demo interceptor</p>
-    <p>Demo actions/effects</p>
-    <p>Demo public api</p>
-    <p>Publish</p>
-    <p>Install here</p>
-    <p>Create effect here</p>
-    <p>Demo here</p>
-    <input/>
-    <input/>
-    <button>Login</button>
+  <section data-background-color="rgb(66,37,117)">
+    <h2>Demo</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6" rvlFragment>
+          <form class="center">
+            <input placeholder="Username"/>
+            <input placeholder="Password" type="password"/>
+            <button>Login</button>
+          </form>
+        </div>
+        <div class="col-6">
+        </div>
+      </div>
+    </div>
   </section>
-  <!--<section data-background-color="rgb(66,37,117)">-->
+  <section data-background-color="rgb(66,37,117)">
+    <h2>Adding feature</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <img width="200" src="../../../assets/habitica-mobile-add-tasks.png">
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>CRUD Habits</li>
+            <li>CRUD Dailys</li>
+            <li>CRUD Todos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-background-color="rgb(66,37,117)">
+    <h2>Add tasks libs</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 center">
+          <pre><code class="bash">ng g lib tasks</code></pre>
+        </div>
+        <div class="col-6 center" style="height: 300px">
+          <img alt="repo image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-background-color="rgb(66,37,117)">
+    <h2>Demo</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <button>Habits</button>
+        </div>
+        <div class="col-4">
+          <button>Dailys</button>
+        </div>
+        <div class="col-4">
+          <button>Todos</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--<section>-->
   <!--<h4>Angular modules</h4>-->
   <!--<h4>@rachnerd/ng-habitica-core</h4>-->
   <!--<h4>@rachnerd/ng-habitica-tasks</h4>-->
   <!--<h4>@rachnerd/ng-habitica-...</h4>-->
   <!--</section>-->
-  <!--<section data-background-color="rgb(66,37,117)">-->
+  <!--<section>-->
   <!--<h4>Angular cli repo vs nx workspace</h4>-->
   <!--<h4>Versioning</h4>-->
   <!--</section>-->
