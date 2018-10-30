@@ -2,6 +2,7 @@
   <rvl-implementation-intro></rvl-implementation-intro>
   <section data-background-color="rgb(7, 52, 106)">
     <div class="container-fluid">
+      <h4>Cross platform</h4>
       <div class="row">
         <div class="col-4 center">
 
@@ -60,54 +61,60 @@
     <!--<h3>ng-packagr</h3>-->
     <!--<p>"Transpile your libraries to Angular Package Format"</p>-->
   </section>
-  <section data-background-color="rgb(7, 52, 106)">
-    <h2>Create Nx repo</h2>
+  <section rvlSlide="cold-dark.jpg">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-6 center">
-          <pre><code class="bash">ng new ng-habitica
-npm i --save @ngrx/store
-npm i --save @ngrx/effects
-ng g lib core</code></pre>
+        <div class="col-6 center" style="font-size: .7em;">
+          <h3>Create repo</h3>
+          <pre><code class="bash">npm install -g @angular/cli
+npm install -g @nativescript/schematics
+npm install -g nativescript
+ng new --c=@nativescript/schematics
+       --name=habitica --shared
+       --style=scss --prefix=hab</code></pre>
         </div>
-        <div class="col-6 center" style="height: 300px">
-          <img alt="repo image">
+        <div class="col-6 center">
+          <img style="height: 12em;" src="../../../assets/app-repo-init.png" alt="repo image">
         </div>
       </div>
     </div>
   </section>
-  <section data-background-color="rgb(7, 52, 106)">
+  <section rvlSlide="cold-dark.jpg">
     <h2>DEMO</h2>
   </section>
-  <section data-background-color="rgb(7, 52, 106)">
+  <section rvlSlide="cold-dark.jpg">
     <h2>Create login component</h2>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-8 center">
+        <div class="col-2">
+        </div>
+        <div class="col-4 center">
           <ul>
-            <li>Login form</li>
+            <li>Login routes</li>
             <li>Login state</li>
+            <li>Login form</li>
+            <li>Login effects</li>
+            <li>@habitica/core</li>
           </ul>
         </div>
-        <div class="col-4 center" style="height: 200px">
-          <img alt="repo image">
+        <div class="col-4 center" >
+          <img style="height: 500px" src="../../../assets/login-component.png" alt="repo image">
         </div>
       </div>
     </div>
   </section>
-  <section data-background-color="rgb(7, 52, 106)">
+  <section rvlSlide="cold-dark.jpg">
     <h2>DEMO</h2>
   </section>
   <section data-background-color="rgb(7, 52, 106)">
-    <h2>Introduce logic</h2>
+    <h2>What next?</h2>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-8 center">
+        <div class="col-12 center">
           <ul>
             <li>Successful login</li>
             <ul>
               <li>Persist API token + User id</li>
-              <li>Fetch user</li>
             </ul>
             <li>Successful user fetch</li>
             <ul>
@@ -115,48 +122,7 @@ ng g lib core</code></pre>
             </ul>
           </ul>
         </div>
-        <div class="col-4 center" style="height: 300px">
-          <img alt="repo image">
-        </div>
       </div>
     </div>
   </section>
-  <section data-background-color="rgb(7, 52, 106)">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4">
-          <h4>Web</h4>
-          <ul>
-            <li>Login HTML</li>
-            <li>DOM</li>
-            <li>Local storage</li>
-            <li>...</li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <h4>Shared</h4>
-          <ul>
-            <li>Login state</li>
-            <li>Login effects</li>
-            <li>...</li>
-            <li>Login route</li>
-            <li>Login guard</li>
-            <li>...</li>
-          </ul>
-
-        </div>
-        <div class="col-4">
-          <h4>Mobile</h4>
-          <ul>
-            <li>Login XML</li>
-            <li>Native</li>
-            <li>App settings</li>
-            <li>...</li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
 </section>

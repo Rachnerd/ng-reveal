@@ -1,0 +1,33 @@
+<section rvlSlide="dusk.jpg" class="blur">
+  <h2>Demo</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+      </div>
+      <div class="col-4" rvlFragment>
+        <img class="authImage" src="../../../assets/habitica-login.png"/>
+      </div>
+
+      <div class="col-4 center" style="overflow: hidden;" rvlFragment>
+        <form class="center" (ngSubmit)="login(username.value, password.value)">
+          <input placeholder="Username" #username/>
+          <input placeholder="Password" type="password" #password/>
+          <button type="submit">Login</button>
+        </form>
+        <br />
+
+        <div class="center result ov-borders" [class.visible]="userData || errorMessage"
+             [class.error]="errorMessage" style="font-size: .6em; height: 6em; width: 20em">
+          <pre style="overflow: hidden;" *ngIf="userData">{{ userData | json }}</pre>
+          <p *ngIf="errorMessage">{{ errorMessage }}</p>
+          <div *ngIf="loading" class="loading">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

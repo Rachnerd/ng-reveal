@@ -1,4 +1,4 @@
-<section  data-background-color="rgb(66,37,117)">
+<section>
   <rvl-core-intro></rvl-core-intro>
   <rvl-core-what></rvl-core-what>
   <rvl-core-api></rvl-core-api>
@@ -6,24 +6,32 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-4">
-          <div class="img-container">
-            <img src="../../../assets/responsive2.png"/>
+          <div class="fragment" data-fragment-index="0">
+            <div class="img-container">
+              <img src="../../../assets/responsive2.png"/>
+            </div>
+            <h4>Client</h4>
           </div>
-          <h4>Client</h4>
         </div>
         <div class="col-4">
-          <div class="img-container img-container--smaller">
-            <img src="../../../assets/lock.svg"/>
+          <div class="fragment">
+            <div class="img-container img-container--smaller">
+              <img src="../../../assets/lock.svg"/>
+            </div>
+            <p>API TOKEN</p>
           </div>
-          <p>API TOKEN</p>
-          <div class="img-container img-container--smaller">
-            <img src="../../../assets/user.svg"/>
+          <div class="fragment">
+            <div class="img-container img-container--smaller">
+              <img src="../../../assets/user.svg"/>
+            </div>
+            <h4>Data</h4>
           </div>
-          <h4>Data</h4>
-          <div class="img-container img-container--smaller">
-            <img src="../../../assets/settings.svg"/>
+          <div class="fragment">
+            <div class="img-container img-container--smaller">
+              <img src="../../../assets/settings.svg"/>
+            </div>
+            <h4>Features</h4>
           </div>
-          <h4>Features</h4>
           <!--<ul>-->
           <!--<li>Auth service</li>-->
           <!--<li>Http interceptor</li>-->
@@ -31,10 +39,12 @@
         </div>
 
         <div class="col-4">
-          <div class="img-container">
-            <img class="habitica" src="../../../assets/habitica.png"/>
+          <div class="fragment" data-fragment-index="0">
+            <div class="img-container">
+              <img class="habitica" src="../../../assets/habitica.png"/>
+            </div>
+            <h4>REST</h4>
           </div>
-          <h4>REST</h4>
         </div>
       </div>
 
@@ -42,86 +52,120 @@
   </section>
   <rvl-core-features></rvl-core-features>
 
-  <rvl-core-module></rvl-core-module>
-  <section data-background-color="rgb(66,37,117)">
-    <h2>Create core repo</h2>
+  <section rvlSlide="dusk.jpg" class="blur">
     <div class="container-fluid">
       <div class="row">
         <div class="col-6 center">
+          <h3>Create core repo</h3>
           <pre><code class="bash">ng new ng-habitica
-npm i --save @ngrx/store
-npm i --save @ngrx/effects
-ng g lib core</code></pre>
+ng g lib habitica-core</code></pre>
         </div>
-        <div class="col-6 center" style="height: 300px">
-            <img alt="repo image">
+        <div class="col-6 center" style="height: 500px">
+          <img src="../../../assets/core-lib-repo.png" alt="repo image">
         </div>
       </div>
     </div>
   </section>
-  <section data-background-color="rgb(66,37,117)">
-    <h2>Demo</h2>
+  <!--<rvl-core-module></rvl-core-module>-->
+  <rvl-core-demo1></rvl-core-demo1>
+  <section rvlSlide="cold-dark.jpg" class="blur">
+    <h4 style="margin-bottom: 1em">State management</h4>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-6" rvlFragment>
-          <form class="center">
-            <input placeholder="Username"/>
-            <input placeholder="Password" type="password"/>
-            <button>Login</button>
-          </form>
+        <div class="col-6">
+          <img width="200" src="../../../assets/rxjs.png">
         </div>
         <div class="col-6">
+          <img width="200" src="../../../assets/ngrx.png">
         </div>
       </div>
     </div>
   </section>
+  <rvl-core-demo2></rvl-core-demo2>
   <section data-background-color="rgb(66,37,117)">
-    <h2>Adding feature</h2>
+    <h2>Get user</h2>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-6">
-          <img width="200" src="../../../assets/habitica-mobile-add-tasks.png">
+        <div class="col-2">
         </div>
-        <div class="col-6">
+        <div class="col-4">
+          <img style="border: 2px solid white" width="200" src="../../../assets/habitica-mobile-tasks.png">
+        </div>
+        <div class="col-4">
           <ul>
-            <li>CRUD Habits</li>
-            <li>CRUD Dailys</li>
-            <li>CRUD Todos</li>
+            <li>Data model</li>
+            <li>Actions</li>
+            <li>Service</li>
+            <li>Effect</li>
+            <li>Interceptor?</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section data-background-color="rgb(66,37,117)">
-    <h2>Add tasks libs</h2>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-6 center">
-          <pre><code class="bash">ng g lib tasks</code></pre>
-        </div>
-        <div class="col-6 center" style="height: 300px">
-          <img alt="repo image">
-        </div>
-      </div>
-    </div>
+  <section rvlSlide="cold-dark.jpg" class="blur">
+    <h2>Potential pitfalls</h2>
+    <ul>
+      <li>Hardcoded values</li>
+      <li>Defining state model</li>
+      <li>Interceptors</li>
+      <li>Effect config</li>
+      <ul>
+        <li>"switchMap" prevents parallel requests</li>
+        <li>"mergeMap" allows parallel requests</li>
+      </ul>
+    </ul>
   </section>
 
+  <rvl-core-demo3></rvl-core-demo3>
+  <rvl-core-add-feature></rvl-core-add-feature>
+  <!--<section>-->
+  <!--<div class="container-fluid">-->
+  <!--<div class="row">-->
+  <!--<div class="col-6 center">-->
+  <!--<h3>Add tasks lib</h3>-->
+  <!--<pre><code class="bash">ng g lib habitica-tasks</code></pre>-->
+  <!--</div>-->
+  <!--<div class="col-6 center" style="height: 10em">-->
+  <!--<img src="../../../assets/habitica-tasks-repo.png" alt="repo image">-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</section>-->
+
+  <!--<section data-background-color="rgb(66,37,117)">-->
+  <!--<h2>Demo</h2>-->
+  <!--<div class="container-fluid">-->
+  <!--<div class="row">-->
+  <!--<div class="col-4">-->
+  <!--<button>Habits</button>-->
+  <!--</div>-->
+  <!--<div class="col-4">-->
+  <!--<button>Dailys</button>-->
+  <!--</div>-->
+  <!--<div class="col-4">-->
+  <!--<button>Todos</button>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</section>-->
+  <!--<rvl-core-demo4></rvl-core-demo4>-->
   <section data-background-color="rgb(66,37,117)">
-    <h2>Demo</h2>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4">
-          <button>Habits</button>
-        </div>
-        <div class="col-4">
-          <button>Dailys</button>
-        </div>
-        <div class="col-4">
-          <button>Todos</button>
-        </div>
-      </div>
-    </div>
+    <h3>Recap core module</h3>
+    <ul style="font-size: .8em">
+      <li>Analyse code that is ALWAYS required</li>
+      <li>Add reasonable amount of configurability</li>
+    </ul>
+  </section>
+  <section data-background-color="rgb(66,37,117)">
+    <h3>Recap feature</h3>
+    <ul style="font-size: .8em">
+      <li>Analyse features that can be packaged as 1 module</li>
+      <li>Features can depend on the core module</li>
+      <li>Never depend on other feature modules</li>
+      <li>Create composable architecture</li>
+    </ul>
   </section>
   <!--<section>-->
   <!--<h4>Angular modules</h4>-->

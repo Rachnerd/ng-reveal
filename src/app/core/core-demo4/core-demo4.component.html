@@ -1,0 +1,36 @@
+<section rvlSlide="dusk.jpg" class="blur">
+  <h2>Demo
+    <img height="50" src="../../../assets/ngrx.png"></h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4" rvlFragment>
+        <img class="authImage" src="../../../assets/habitica-login.png"/>
+      </div>
+
+      <div class="col-8 center" rvlFragment>
+        <form class="center" (ngSubmit)="login(username.value, password.value)">
+          <input placeholder="Username" #username/>
+          <input placeholder="Password" type="password" #password/>
+          <button type="submit">Login</button>
+        </form>
+
+        <div style="height: 6em">
+          <div style="height: 2em" *ngIf="state$ | async as state">
+            <pre style="overflow: hidden; width: 20em">{{ state.actionType}}</pre>
+          </div>
+          <div *ngIf="state$ | async as state" class="center result ov-borders"
+               [class.visible]="state.userData || state.errorMessage"
+               [class.error]="state.errorMessage" style="font-size: .6em; height: 6em; width: 20em">
+            <pre style="overflow-y: auto; overflow-x: hidden;" *ngIf="state.userData">{{ state.userData | json }}</pre>
+            <p *ngIf="state.errorMessage">{{ state.errorMessage }}</p>
+            <div *ngIf="state.loading" class="loading">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
